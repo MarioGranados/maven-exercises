@@ -9,7 +9,11 @@ public class Example {
 
         System.out.println("Enter a word so that I could reverse it");
         String str = in.nextLine();
-
+        try {
+            Integer.valueOf(str);
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println(StringUtils.reverse(str));
     }
