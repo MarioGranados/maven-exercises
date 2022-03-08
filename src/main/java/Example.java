@@ -9,12 +9,16 @@ public class Example {
 
         System.out.println("Enter a word so that I could reverse it");
         String str = in.nextLine();
-        try {
-            Integer.valueOf(str);
-        } catch(Exception e) {
-            System.out.println(e.getMessage());
+
+        //System.out.println(StringUtils.isNumeric(str));
+
+        if(!StringUtils.isNumeric(str)) {
+            System.out.println(StringUtils.reverse(str));;
+            System.out.println(StringUtils.swapCase(str));
+        } else {
+            System.out.println("you didn't enter a string");
         }
 
-        System.out.println(StringUtils.reverse(str));
+
     }
 }
